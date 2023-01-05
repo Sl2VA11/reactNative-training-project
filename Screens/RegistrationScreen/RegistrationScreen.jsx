@@ -30,6 +30,8 @@ export function RegistrationScreen({ navigation }) {
       password - ${password},
     `
     );
+
+    navigation.navigate("Home");
     setName("");
     setEmail("");
     setPassword("");

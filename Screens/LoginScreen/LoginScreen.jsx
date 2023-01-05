@@ -15,13 +15,14 @@ import { useState } from "react";
 
 export function LoginScreen({ navigation }) {
   const [focus, setFocus] = useState(false);
-  
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState({
     text: "show",
     isShow: true,
   });
+  
 
   const onSubmit = () => {
     console.log(
@@ -30,7 +31,7 @@ export function LoginScreen({ navigation }) {
       password - ${password},
     `
     );
-    
+    navigation.navigate("Home");
     setEmail("");
     setPassword("");
   };
@@ -116,4 +117,3 @@ export function LoginScreen({ navigation }) {
     </>
   );
 }
-
